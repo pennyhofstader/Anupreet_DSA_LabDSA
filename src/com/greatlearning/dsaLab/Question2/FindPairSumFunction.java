@@ -40,7 +40,8 @@ public class FindPairSumFunction {
 			return true;
 
 		if (set.contains(sum - root.nodeData)) {
-			System.out.println("Pair is " + (sum - root.nodeData) + " + " + root.nodeData);
+			System.out.println("Sum = " + sum);
+			System.out.println("Pair is (" + (sum - root.nodeData) + " ," + root.nodeData + ")");
 			return true;
 		} else
 			set.add(root.nodeData);
@@ -52,7 +53,7 @@ public class FindPairSumFunction {
 		{
 			HashSet<Integer> set = new HashSet<Integer>();
 			if (!findPair(root, sum, set))
-				System.out.print("Pair does not exit");
+				System.out.print("Nodes Are Not Found");
 		}
 	}
 
